@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahma Nait Limam - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Reusable Classes */
+        .gradient-text {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .work-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 4/5; /* 1080x1350 aspect ratio */
+        }
+        
+        .work-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .work-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .work-item:hover .work-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .download-btn {
+            background-color: #EC4899;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background-color: #DB2777;
+        }
+        
+        .contact-input {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            border: 1px solid #E5E7EB;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-input:focus {
+            outline: none;
+            border-color: #EC4899;
+            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+        }
+        
+        .submit-btn {
+            background-color: #EC4899;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #DB2777;
+            transform: translateY(-2px);
+        }
+        
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+        }
+        
+        /* Mobile Menu */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        #mobile-menu.active {
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">Rahma Nait Limam</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-pink-500 transition">Home</a>
+                    <a href="#work" class="text-gray-700 hover:text-pink-500 transition">Portfolio</a>
+                    <a href="#about" class="text-gray-700 hover:text-pink-500 transition">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-pink-500 transition">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden mt-4" id="mobile-menu">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-pink-500">Home</a>
+                <a href="#work" class="block py-2 text-gray-700 hover:text-pink-500">Portfolio</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-pink-500">About</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-pink-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 bg-gradient-to-r from-pink-50 to-blue-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Hi, I'm <span class="gradient-text">Rahma</span></h1>
+                <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">Computer Science (Multimedia) Student</h2>
+                <p class="text-gray-600 mb-8 max-w-lg">This portfolio showcases my passion for graphic design through a collection of eye-catching posters created with Photoshop. Each piece reflects my creative approach to visual storytelling, blending color, layout, and typography to communicate powerful messages. You can download the PSD files to explore the layers and techniques behind each design.</p>
+                <div class="flex space-x-4">
+                    <a href="#work" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full shadow-lg transition">View My Work</a>
+                    <a href="#contact" class="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white px-6 py-3 rounded-full shadow-lg transition">Hire Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="me.jpeg" 
+                     alt="Designer working" 
+                     class="rounded-lg shadow-2xl floating max-w-md w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">My <span class="gradient-text">Poster Designs</span></h2>
+            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Explore my Photoshop creations. Click on any project to view details and download the PSD file.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="work-item group">
+                    <img src="boga.png" 
+                         alt="Boga Poster Design" 
+                         class="work-image">
+                    <div class="work-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Boga Poster</h3>
+                        <p class="text-gray-300 text-sm mb-4 text-center">Boga is a Tunisian coca brand. </br>Created with Photoshop .</p>
+                        <button class="download-btn" data-psd="boga.psd">
+                            <i class="fas fa-download mr-2"></i> Download PSD
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="work-item group">
+                    <img src="garn.png" 
+                         alt="Garnier Product Poster" 
+                         class="work-image">
+                    <div class="work-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Garnier Product Poster</h3>
+                        <p class="text-gray-300 text-sm mb-4 text-center">A clean, fresh poster design for a Garnier skincare product. </br>Created with Photoshop.</p>
+                        <button class="download-btn" data-psd="garn.psd">
+                            <i class="fas fa-download mr-2"></i> Download PSD
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="work-item group">
+                    <img src="ICE CREAM.png" 
+                         alt="Ice Cream Poster Design" 
+                         class="work-image">
+                    <div class="work-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Ice Cream Poster</h3>
+                        <p class="text-gray-300 text-sm mb-4 text-center">This playful, pastel-toned poster was designed to promote a new ice cream truck . </br>Created with Photoshop.</p>
+                        <button class="download-btn" data-psd="ICE CREAM..psd">
+                            <i class="fas fa-download mr-2"></i> Download PSD
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="work-item group">
+                    <img src="tp3.png" 
+                         alt="Dream Car Poster" 
+                         class="work-image">
+                    <div class="work-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Dream Car Flyer </h3>
+                        <p class="text-gray-300 text-sm mb-4 text-center">A sleek, modern Flyer  created for a car advertisement . Focused on clean lines and bold contrast.</br>Created with Photoshop</p>
+                        <button class="download-btn" data-psd="tp3.psd">
+                            <i class="fas fa-download mr-2"></i> Download PSD
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="work-item group">
+                    <img src="lunara.png" 
+                         alt="Book Cover Poster" 
+                         class="work-image">
+                    <div class="work-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">lunara</h3>
+                        <p class="text-gray-300 text-sm mb-4 text-center">natural skincare product. moon as the main symbol to represent calm and rest, with a soft green leaf.</br>Created with Canva</p>
+                        <button class="download-btn" data-psd="lunara.psd">
+                            <i class="fas fa-download mr-2"></i> Download PSD
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="work-item group">
+                    <img src="fig.PNG" 
+                         alt="Social Media Poster" 
+                         class="work-image">
+                    <div class="work-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Social Media Poster</h3>
+                        <p class="text-gray-300 text-sm mb-4 text-center">Instagram post design in 1080x1350 format.</p>
+                        <button class="download-btn" data-psd="RahmaNL.psd">
+                            <i class="fas fa-download mr-2"></i> Download PSD
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-gray-800 hover:bg-black text-white px-8 py-3 rounded-full shadow-lg transition">
+                    View More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                <div class="relative">
+                    <img src="me.jpeg" 
+                         alt="Rahma Nait Limam" 
+                         class="rounded-full w-64 h-64 object-cover border-4 border-white shadow-xl">
+                    <div class="absolute -bottom-4 -right-4 bg-pink-500 text-white p-4 rounded-full shadow-lg">
+                        <i class="fas fa-paint-brush text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">About <span class="gradient-text">Me</span></h2>
+                <p class="text-gray-600 mb-6">I am a second-year computer science (multimedia) student. Passionate
+                    about multimedia technologies, web development, mobile
+                    development, and foundations & programming artificial intelligence.
+                    Curious, organized, and a fast learner.</p>
+                <p class="text-gray-600 mb-8">I enjoy creating posters, logos, and flyers that look good and share a message. I use tools like Canva and espacially Photoshop to bring my ideas to life and learn something new with every project. Designing helps me express creativity and build useful skills for the future.</p>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Hard Skills</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="skill-tag bg-purple-100 text-purple-800">Graphic design</span>
+                        <span class="skill-tag bg-pink-100 text-pink-800">Photoshop</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">Poster Design</span>
+                        <span class="skill-tag bg-yellow-100 text-yellow-800">infographie</span>
+                        <span class="skill-tag bg-purple-100 text-purple-800">Color matching</span>
+                        <span class="skill-tag bg-green-100 text-green-800">Web development</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">Mobile development</span>
+                        <span class="skill-tag bg-yellow-100 text-yellow-800">Programming</span>
+                        <span class="skill-tag bg-green-100 text-green-800">Video editing</span>
+                        
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Soft  Skills</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="skill-tag bg-purple-100 text-purple-800">Problem-Solving </span>
+                        <span class="skill-tag bg-pink-100 text-pink-800">Creativity</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">Professional</span>
+                        <span class="skill-tag bg-yellow-100 text-yellow-800">Quick Learner & Adaptable</span>
+                        <span class="skill-tag bg-purple-100 text-purple-800">Management Skills</span>
+                        <span class="skill-tag bg-green-100 text-green-800">Collaborative</span>
+                        <span class="skill-tag bg-blue-100 text-blue-800">Attention to detail</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold gradient-text mb-4">Rahma Nait Limam</div>
+                    <p class="text-gray-400">naitlimamrahma1@gmail.com</p>
+                    <p class="text-gray-400">+216 95 273 108</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://www.linkedin.com/" class="social-icon" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/rahmouna.limam/" class="social-icon" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="social-icon" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+    </footer>
+</html>
