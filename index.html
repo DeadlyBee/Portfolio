@@ -165,7 +165,7 @@
     <!-- Portfolio Section -->
     <section id="work" class="py-20 px-6 bg-white">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">My <span class="gradient-text">Poster Designs</span></h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">My <span class="gradient-text">Designs</span></h2>
             <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Explore my Photoshop creations. Click on any project to view details and download the PSD file.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -218,7 +218,7 @@
                          class="work-image">
                     <div class="work-overlay">
                         <h3 class="text-white text-xl font-bold mb-2">Dream Car Flyer </h3>
-                        <p class="text-gray-300 text-sm mb-4 text-center">A sleek, modern Flyer  created for a car advertisement . Focused on clean lines and bold contrast.</br>Created with Photoshop</p>
+                        <p class="text-gray-300 text-sm mb-4 text-center">A sleek, modern Flyer created for a car advertisement . Focused on clean lines and bold contrast.</br>Created with Photoshop</p>
                         <button class="download-btn" onclick="downloadFile('tp3.psd')">
                             <i class="fas fa-download mr-2"></i> Download PSD
                         </button>
@@ -256,16 +256,15 @@
             
         </div>
         <script>
-            // Function to handle the file download
             function downloadFile(fileName) {
                 const link = document.createElement('a');
-                link.href = fileName;  // Path to the PSD file (this should be correct relative path or URL)
-                link.download = fileName;  // Set the download attribute with the file name
-                link.click();  // Simulate a click on the link to trigger the download
+                link.href = fileName; 
+                link.download = fileName;
+                link.click();
             }
         </script>
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 mt-12">My <span class="gradient-text">App Development</span></h2>
-        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Explore the mobile apps I’ve built. Click on any project to view details.</p>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Explore the mobile apps I’ve built. Move the mouse on any project to view details.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             <div class="work-item group" style="aspect-ratio: 16/9;">
@@ -278,7 +277,7 @@
                     <div class="work-overlay">
                         <h3 class="text-white text-xl font-bold mb-2">Kindergarten Management System Website</h3>
                         <p class="text-gray-300 text-sm mb-4 text-center">Developed a full-stack management system, implemented dashboards
-                            with personalized data views for each user type.</p>
+                            with personalized data views for each user type, using HTML, PHP, CSS, MySQL, and JavaScript .</p>
                     
                     </div>
                 </div>
@@ -294,7 +293,8 @@
                     <div class="work-overlay">
                         <h3 class="text-white text-xl font-bold mb-2">Restaurant Website</h3>
                         <p class="text-gray-300 text-sm mb-4 text-center">Developed a full-stack restaurant website (not fully completed) with fully responsive landing
-                            page with an image slider, modern layout, and visual hierarchy</p>
+                            page with an image slider, modern layout, and visual hierarchy, using HTML, PHP,
+CSS, MySQL, and JavaScript .</p>
                     
                     </div>
                 </div>
@@ -309,7 +309,8 @@
                     </div>
                     <div class="work-overlay">
                         <h3 class="text-white text-xl font-bold mb-2">Supermarket Inventory Management</h3>
-                        <p class="text-gray-300 text-sm mb-4 text-center">Built a Java Desktop Application using Java Swing for the UI and JDBC.</p>
+                        <p class="text-gray-300 text-sm mb-4 text-center">Built a desktop application using Java Swing for the UI and JDBC for
+database connectivity (MySQL) .</p>
                     
                     </div>
                 </div>
