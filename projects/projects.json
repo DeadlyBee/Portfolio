@@ -1,0 +1,183 @@
+[
+  {
+    "name": "Galaxy Breaker VR",
+    "desc": "VR space game where players pilot a spaceship, dodge incoming asteroids, interact with the environment, and destroy obstacles using laser weapons.",
+    "image": "",
+    "category": "vr",
+    "links": {
+      "view": "projects/1/index.html"
+    },
+    "id": "1"
+  },
+    {
+    "name": "AR Animal Explorer",
+    "desc": "AR app that brings animals to life t by simply scanning a book page, designed to make learning fun and immersive for children.",
+    "image": "",
+    "category": "vr",
+    "links": {
+      "view": "projects/2/index.html"
+    },
+    "id": "2"
+  },
+    {
+    "name": "Echrini",
+    "desc": "A full-stack e-commerce platform for selling gym and fitness equipment, built with a Spring Boot REST API and an Angular front-end.",
+    "image": "echrini1",
+    "category": "webdev",
+    "links": {
+      "view": "projects/3/index.html"
+    },
+    "id": "3"
+  },
+    {
+    "name": "ArcadeX",
+    "desc": "A full-stack e-commerce web application for selling gaming equipment, built with Angular and Spring Boot,and REST-based backend architecture.",
+    "image": "arcade1",
+    "category": "webdev",
+    "links": {
+      "view": "projects/4/index.html"
+    },
+    "id": "4"
+  },
+    {
+    "name": "VR Bowling Game",
+    "desc": "VR bowling game built to simulate real bowling physics, designed both for fun and for practicing bowling skills in a virtual environment.",
+    "image": "",
+    "category": "vr",
+    "links": {
+      "view": "projects/5/index.html"
+    },
+    "id": "5"
+  },
+    {
+    "name": "MarketHub",
+    "desc": "A dynamic Angular-based market application with backend data integration, API testing, and real product data handling.",
+    "image": "markethub1",
+    "category": "webdev",
+    "links": {
+      "view": "projects/6/index.html"
+    },
+    "id": "6"
+  },
+  {
+    "name": "Dodgie2D",
+    "desc": "A beginner-friendly 2D Unity game created as a hands-on tutorial, focusing on collision detection, player movement, and basic game logic.",
+    "image": "",
+    "category": "vr",
+    "links": {
+      "view": "projects/7/index.html"
+    },
+    "id": "7"
+  },
+    {
+    "name": "KinderConnect",
+    "desc": "A full-stack kindergarten management system developed as a FPFA (First Final Academic Project), presented to a jury, and awarded a high evaluation score.",
+    "image": "kind1",
+    "category": "webdev",
+    "links": {
+      "view": "projects/8/index.html"
+    },
+    "id": "8"
+  },
+    {
+    "name": "GILDORA",
+    "desc": "A full-stack restaurant website featuring a modern, responsive design, dynamic content, and a strong visual identity.",
+    "image": "gild1",
+    "category": "webdev",
+    "links": {
+      "view": "projects/9/index.html"
+    },
+    "id": "9"
+  },
+    {
+    "name": "ContactEase",
+    "desc": "A Java-based Android contact management app designed to store, organize, and manage personal contact information.",
+    "image": "supp1",
+    "category": "webdev",
+    "links": {
+      "view": "projects/10/index.html"
+    },
+    "id": "10"
+  },
+    {
+    "name": "StockMaster",
+    "desc": "Built a desktop Java application using Java Swing for the UI and JDBC for database connectivity (MySQL) .",
+    "image": "",
+    "category": "vr",
+    "links": {
+      "view": "projects/11/index.html"
+    },
+    "id": "11"
+  },
+    {
+    "name": "Valantino",
+    "desc": "A detailed 3D perfume bottle model designed and rendered in Blender, focusing on clean geometry, materials, and realistic lighting.",
+    "image": "",
+    "category": "design",
+    "links": {
+      "view": "projects/12/index.html"
+    },
+    "id": "12"
+  },
+    {
+    "name": "Valantino 0.2",
+    "desc": "A cinematic 3D product animation with visual effects, expanding the Valantino perfume model adding look and VRFX",
+    "image": "",
+    "category": "design",
+    "links": {
+      "view": "projects/13/index.html"
+    },
+    "id": "13"
+  },
+    {
+    "name": "BOGA",
+    "desc": "A dynamic product poster designed to showcase BOGA Lemon through an exploded composition, emphasizing freshness, flavor, and energy.",
+    "image": "boga",
+    "category": "design",
+    "links": {
+      "view": "projects/14/index.html"
+    },
+    "id": "14"
+  },
+    {
+    "name": "Rose Water",
+    "desc": " clean and elegant product poster designed to highlight Garnier’s Micellar Rose Water through soft colors, visual balance, and brand-focused composition.",
+    "image": "garn",
+    "category": "design",
+    "links": {
+      "view": "projects/15/index.html"
+    },
+    "id": "15"
+  },
+    {
+    "name": "NISMO GT-R",
+    "desc": "A high-impact promotional flyer designed to showcase the power, performance, and identity of the NISMO GT-R through bold visuals and strong contrast.",
+    "image": "nismo",
+    "category": "design",
+    "links": {
+      "view": "projects/16/index.html"
+    },
+    "id": "16"
+  },
+    {
+    "name": "GILDORA-Brand Board",
+    "desc": "Brand Board for the site web i made. Created with Canva.",
+    "image": "BB-gild",
+    "category": "design",
+    "links": {
+      "view": "projects/17/index.html"
+    },
+    "id": "17"
+  },
+    {
+    "name": "gildora-visual identity",
+    "desc": "visual identity for the site web i made. Created with Photoshop",
+    "image": "",
+    "category": "id-gild",
+    "links": {
+      "view": "projects/18/index.html"
+    },
+    "id": "18"
+  }
+  
+]
